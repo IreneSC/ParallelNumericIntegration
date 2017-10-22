@@ -1,0 +1,246 @@
+Advanced
+max_subdivisions: 100000
+,Error Goal 0.001
+,Type,Integral,Result,Error,Time, AbsError
+gaussLegendreFixed:
+,simple,sin(x) from 0 to 10.459698,0.459698,0.000000,0.000078,
+,simple,x^2 from 0 to 10.333333,0.333333,0.000000,0.000002,
+,simple,x^3 from 0 to 10.250000,0.250000,0.000000,0.000003,
+,simple,x^10000 from 0 to 10.000000,0.000000,0.000100,0.000003,
+,simple,3*x^4+4*x^3+76*x^2+58*x+4 from -20 to 01951146.666667,1951146.666667,0.000000,0.000003,
+,simple,x^-1 from 1 to 20.693122,0.693122,0.000025,0.000001,
+,simple,e^x from 0 to 11.718281,1.718281,0.000001,0.000002,
+,simple,x^1/2 from 0 to 10.669180,0.669180,0.002513,0.000000,
+,discontinuous,(e^x-1)/x (edge discontinuity) from 0 to 11.317902,1.317902,0.000000,0.000001,
+,discontinuous,1/sqrt(abs(x)) (edge discontinuity) from -9 to 111.006327,11.006327,3.006327,0.000000,
+,discontinuous,sin(x)*sqrt(1-x^2) (edge discontinuity) *note: answer only accurate to e-6 from 0 to 10.314904,0.314904,0.003168,0.000001,
+,discontinuous,sin(x)/x (edge discontinuity) from 0 to 31.848690,1.848690,0.000037,0.000001,
+,discontinuous,sqrt(abs(x-0.7)) (middle discontinuity) *note: answer only accurate to e-6 from 0 to 10.531854,0.531854,0.031868,0.000001,
+,discontinuous,(x+2)(x-2)/(x-2) (middle discontinuity) from 1 to 3-nan,-nan,nan,0.000000,
+,discontinuous,floor(x) (middle discontinuity) from 0 to 21.444444,1.444444,0.444444,0.000001,
+,discontinuous,piecewise (middle discontinuity) from 0 to 2nan,nan,nan,0.000000,
+,badly behaved,e^x*ln(sin(x)) *note: answer only accurate to e-4 from 0 to 3.14159-16.329836,-16.329836,4.515064,0.000003,
+,badly behaved,ln(x) from 0 to 1-0.947672,-0.947672,0.052328,0.000002,
+,badly behaved,ln(x^2) from 8 to 94.278978,4.278978,0.000000,0.000001,
+,badly behaved,ln(1/x) from 0 to 10.947672,0.947672,0.052328,0.000001,
+,badly behaved,x^2*sin(1/x) (oscillatory) from 0 to 0.636620.056199,0.056199,0.002369,0.000003,
+,badly behaved,ln(abs(x-0.7)) from 0 to 1-1.328438,-1.328438,0.282427,0.000001,
+,badly behaved,sqrt(1-x^4)/x^(1-1/pi) from 0 to 12.106208,2.106208,0.892006,0.000002,
+,badly behaved,e^x/(x^(1/pi) from 0 to 12.237340,2.237340,0.066564,0.000001,
+nonAdaptiveGaussKronrod:
+,simple,sin(x) from 0 to 10.459698,0.459698,0.000000,0.000015,0.000000
+,simple,x^2 from 0 to 10.333333,0.333333,0.000000,0.000002,0.000000
+,simple,x^3 from 0 to 10.250000,0.250000,0.000000,0.000006,0.000000
+,simple,x^10000 from 0 to 10.000000,0.000000,0.000100,0.000006,0.000000
+,simple,3*x^4+4*x^3+76*x^2+58*x+4 from -20 to 01951146.666667,1951146.666667,0.000000,0.000011,0.000000
+,simple,x^-1 from 1 to 20.693147,0.693147,0.000000,0.000001,0.000000
+,simple,e^x from 0 to 11.718282,1.718282,0.000000,0.000005,0.000000
+,simple,x^1/2 from 0 to 10.666667,0.666667,0.000000,0.000002,0.000062
+,discontinuous,(e^x-1)/x (edge discontinuity) from 0 to 11.317902,1.317902,0.000000,0.000004,0.000000
+,discontinuous,1/sqrt(abs(x)) (edge discontinuity) from -9 to 17.866844,7.866844,0.133156,0.000007,4.235325
+,discontinuous,sin(x)*sqrt(1-x^2) (edge discontinuity) *note: answer only accurate to e-6 from 0 to 10.311736,0.311736,0.000000,0.000009,0.000104
+,discontinuous,sin(x)/x (edge discontinuity) from 0 to 31.848653,1.848653,0.000000,0.000004,0.000000
+,discontinuous,sqrt(abs(x-0.7)) (middle discontinuity) *note: answer only accurate to e-6 from 0 to 10.500758,0.500758,0.000772,0.000001,0.000018
+,discontinuous,(x+2)(x-2)/(x-2) (middle discontinuity) from 1 to 3-nan,-nan,nan,0.000002,nan
+,discontinuous,floor(x) (middle discontinuity) from 0 to 21.018681,1.018681,0.018681,0.000003,0.994417
+,discontinuous,piecewise (middle discontinuity) from 0 to 2nan,nan,nan,0.000001,nan
+,badly behaved,e^x*ln(sin(x)) *note: answer only accurate to e-4 from 0 to 3.14159-20.843670,-20.843670,0.001230,0.000048,0.391375
+,badly behaved,ln(x) from 0 to 1-0.999983,-0.999983,0.000017,0.000017,0.003600
+,badly behaved,ln(x^2) from 8 to 94.278978,4.278978,0.000000,0.000004,0.000000
+,badly behaved,ln(1/x) from 0 to 10.999983,0.999983,0.000017,0.000016,0.003600
+,badly behaved,x^2*sin(1/x) (oscillatory) from 0 to 0.636620.058571,0.058571,0.000003,0.000020,0.001286
+,badly behaved,ln(abs(x-0.7)) from 0 to 1-1.649397,-1.649397,0.038532,0.000016,0.768132
+,badly behaved,sqrt(1-x^4)/x^(1-1/pi) from 0 to 12.926611,2.926611,0.071603,0.000028,2.175074
+,badly behaved,e^x/(x^(1/pi) from 0 to 12.303612,2.303612,0.000292,0.000027,0.129563
+,simple,sin(x) from 0 to 10.459698,0.459698,0.000000,0.000093
+,simple,x^2 from 0 to 10.333333,0.333333,0.000000,0.000072
+,simple,x^3 from 0 to 10.250000,0.250000,0.000000,0.000071
+,simple,x^10000 from 0 to 10.000000,0.000000,0.000100,0.000063
+,simple,3*x^4+4*x^3+76*x^2+58*x+4 from -20 to 01951146.666667,1951146.666667,0.000000,0.000064
+,simple,x^-1 from 1 to 20.693147,0.693147,0.000000,0.000059
+,simple,e^x from 0 to 11.718282,1.718282,0.000000,0.000063
+,simple,x^1/2 from 0 to 10.666981,0.666981,0.000314,0.000054
+,discontinuous,(e^x-1)/x (edge discontinuity) from 0 to 11.317902,1.317902,0.000000,0.000053
+,discontinuous,1/sqrt(abs(x)) (edge discontinuity) from -9 to 17.221218,7.221218,0.778782,0.000050
+,discontinuous,sin(x)*sqrt(1-x^2) (edge discontinuity) *note: answer only accurate to e-6 from 0 to 10.312116,0.312116,0.000380,0.000061
+,discontinuous,sin(x)/x (edge discontinuity) from 0 to 31.848653,1.848653,0.000000,0.000050
+,discontinuous,sqrt(abs(x-0.7)) (middle discontinuity) *note: answer only accurate to e-6 from 0 to 10.502391,0.502391,0.002405,0.000050
+,discontinuous,(x+2)(x-2)/(x-2) (middle discontinuity) from 1 to 38.000000,8.000000,0.000000,0.000052
+,discontinuous,floor(x) (middle discontinuity) from 0 to 21.000000,1.000000,0.000000,0.000052
+,discontinuous,piecewise (middle discontinuity) from 0 to 22.500000,2.500000,0.000000,0.000056
+,badly behaved,e^x*ln(sin(x)) *note: answer only accurate to e-4 from 0 to 3.14159-19.825881,-19.825881,1.019019,0.000062
+,badly behaved,ln(x) from 0 to 1-0.986917,-0.986917,0.013083,0.000048
+,badly behaved,ln(x^2) from 8 to 94.278978,4.278978,0.000000,0.000057
+,badly behaved,ln(1/x) from 0 to 10.986917,0.986917,0.013083,0.000040
+,badly behaved,x^2*sin(1/x) (oscillatory) from 0 to 0.636620.058738,0.058738,0.000171,0.000047
+,badly behaved,ln(abs(x-0.7)) from 0 to 1-1.564627,-1.564627,0.046238,0.000039
+,badly behaved,sqrt(1-x^4)/x^(1-1/pi) from 0 to 12.421808,2.421808,0.576406,0.000056
+,badly behaved,e^x/(x^(1/pi) from 0 to 12.277702,2.277702,0.026203,0.000039
+,simple,sin(x) from 0 to 10.459698,0.459698,0.000000,0.000065,0.359949
+,simple,x^2 from 0 to 10.333333,0.333333,0.000000,0.000043,0.599957
+,simple,x^3 from 0 to 10.250000,0.250000,0.000000,0.000049,0.774569
+,simple,x^10000 from 0 to 10.000006,0.000006,0.000094,0.000065,0.880096
+,simple,3*x^4+4*x^3+76*x^2+58*x+4 from -20 to 01951146.666667,1951146.666667,0.000000,0.000064,0.938134
+,simple,x^-1 from 1 to 20.693147,0.693147,0.000000,0.000049,0.968573
+,simple,e^x from 0 to 11.718282,1.718282,0.000000,0.000067,0.984161
+,simple,x^1/2 from 0 to 10.666667,0.666667,0.000001,0.000049,0.992049
+,discontinuous,(e^x-1)/x (edge discontinuity) from 0 to 11.317902,1.317902,0.000000,0.000061,0.996017
+,discontinuous,1/sqrt(abs(x)) (edge discontinuity) from -9 to 17.753787,7.753787,0.246213,0.000053,1.870735
+,discontinuous,sin(x)*sqrt(1-x^2) (edge discontinuity) *note: answer only accurate to e-6 from 0 to 10.311737,0.311737,0.000001,0.000055,1.367749
+,discontinuous,sin(x)/x (edge discontinuity) from 0 to 31.848653,1.848653,0.000000,0.000053,1.169508
+,discontinuous,sqrt(abs(x-0.7)) (middle discontinuity) *note: answer only accurate to e-6 from 0 to 10.499992,0.499992,0.000006,0.000048,1.081477
+,discontinuous,(x+2)(x-2)/(x-2) (middle discontinuity) from 1 to 38.000000,8.000000,0.000000,0.000058,1.039941
+,discontinuous,floor(x) (middle discontinuity) from 0 to 21.000000,1.000000,0.000000,0.000057,1.019775
+,discontinuous,piecewise (middle discontinuity) from 0 to 22.500000,2.500000,0.000000,0.000041,1.009839
+,badly behaved,e^x*ln(sin(x)) *note: answer only accurate to e-4 from 0 to 3.14159-20.844624,-20.844624,0.000276,0.000056,1.007047
+,badly behaved,ln(x) from 0 to 1-0.999996,-0.999996,0.000004,0.000058,1.003518
+,badly behaved,ln(x^2) from 8 to 94.278978,4.278978,0.000000,0.000062,1.001757
+,badly behaved,ln(1/x) from 0 to 10.999996,0.999996,0.000004,0.000056,1.000879
+,badly behaved,x^2*sin(1/x) (oscillatory) from 0 to 0.636620.058554,0.058554,0.000014,0.000061,1.000440
+,badly behaved,ln(abs(x-0.7)) from 0 to 1-1.609888,-1.609888,0.000976,0.000049,1.022745
+,badly behaved,sqrt(1-x^4)/x^(1-1/pi) from 0 to 12.952158,2.952158,0.046056,0.000063,1.694369
+,badly behaved,e^x/(x^(1/pi) from 0 to 12.303791,2.303791,0.000113,0.000054,1.302438
+,simple,sin(x) from 0 to 10.459698,0.459698,0.000000,0.000129,0.000000
+,simple,x^2 from 0 to 10.333333,0.333333,0.000000,0.000033,0.000000
+,simple,x^3 from 0 to 10.250000,0.250000,0.000000,0.000028,0.000000
+,simple,x^10000 from 0 to 10.000000,0.000000,0.000100,0.000033,0.000000
+,simple,3*x^4+4*x^3+76*x^2+58*x+4 from -20 to 01951146.666667,1951146.666667,0.000000,0.000029,0.000000
+,simple,x^-1 from 1 to 20.693147,0.693147,0.000000,0.000024,0.000000
+,simple,e^x from 0 to 11.718282,1.718282,0.000000,0.000035,0.000000
+,simple,x^1/2 from 0 to 10.666667,0.666667,0.000001,0.000036,0.000998
+,discontinuous,(e^x-1)/x (edge discontinuity) from 0 to 11.317902,1.317902,0.000000,0.000035,0.000000
+,discontinuous,1/sqrt(abs(x)) (edge discontinuity) from -9 to 18.000733,8.000733,0.000733,0.000060,0.007622
+,discontinuous,sin(x)*sqrt(1-x^2) (edge discontinuity) *note: answer only accurate to e-6 from 0 to 10.311736,0.311736,0.000000,0.000069,0.000437
+,discontinuous,sin(x)/x (edge discontinuity) from 0 to 31.848653,1.848653,0.000000,0.000041,0.000000
+,discontinuous,sqrt(abs(x-0.7)) (middle discontinuity) *note: answer only accurate to e-6 from 0 to 10.499946,0.499946,0.000040,0.000043,0.000851
+,discontinuous,(x+2)(x-2)/(x-2) (middle discontinuity) from 1 to 38.000000,8.000000,0.000000,0.000037,nan
+,discontinuous,floor(x) (middle discontinuity) from 0 to 21.000000,1.000000,0.000000,0.000036,0.000000
+,discontinuous,piecewise (middle discontinuity) from 0 to 22.500000,2.500000,0.000000,0.000036,nan
+,badly behaved,e^x*ln(sin(x)) *note: answer only accurate to e-4 from 0 to 3.14159-20.844906,-20.844906,0.000006,0.000405,0.015389
+,badly behaved,ln(x) from 0 to 1-0.999998,-0.999998,0.000002,0.000107,0.000717
+,badly behaved,ln(x^2) from 8 to 94.278978,4.278978,0.000000,0.000040,0.000000
+,badly behaved,ln(1/x) from 0 to 10.999998,0.999998,0.000002,0.000103,0.000717
+,badly behaved,x^2*sin(1/x) (oscillatory) from 0 to 0.636620.058555,0.058555,0.000013,0.000062,0.000851
+,badly behaved,ln(abs(x-0.7)) from 0 to 1-1.610920,-1.610920,0.000056,0.000104,0.000932
+,badly behaved,sqrt(1-x^4)/x^(1-1/pi) from 0 to 12.997952,2.997952,0.000262,0.000383,0.002439
+,badly behaved,e^x/(x^(1/pi) from 0 to 12.303867,2.303867,0.000037,0.000159,0.002214
+,simple,sin(x) from 0 to 10.459698,0.459698,0.000000,0.000043,0.000000
+,simple,x^2 from 0 to 10.333333,0.333333,0.000000,0.000034,0.000000
+,simple,x^3 from 0 to 10.250000,0.250000,0.000000,0.000037,0.000000
+,simple,x^10000 from 0 to 10.000000,0.000000,0.000100,0.000052,0.000000
+,simple,3*x^4+4*x^3+76*x^2+58*x+4 from -20 to 01951146.666667,1951146.666667,0.000000,0.000043,0.000000
+,simple,x^-1 from 1 to 20.693147,0.693147,0.000000,0.000031,0.000000
+,simple,e^x from 0 to 11.718282,1.718282,0.000000,0.000037,0.000000
+,simple,x^1/2 from 0 to 10.666667,0.666667,0.000001,0.000037,0.000619
+,discontinuous,(e^x-1)/x (edge discontinuity) from 0 to 11.317902,1.317902,0.000000,0.000038,0.000000
+,discontinuous,1/sqrt(abs(x)) (edge discontinuity) from -9 to 18.000000,8.000000,0.000000,0.000050,0.000000
+,discontinuous,sin(x)*sqrt(1-x^2) (edge discontinuity) *note: answer only accurate to e-6 from 0 to 10.311737,0.311737,0.000001,0.000057,0.000881
+,discontinuous,sin(x)/x (edge discontinuity) from 0 to 31.848653,1.848653,0.000000,0.000040,0.000000
+,discontinuous,sqrt(abs(x-0.7)) (middle discontinuity) *note: answer only accurate to e-6 from 0 to 10.499996,0.499996,0.000010,0.000039,0.000796
+,discontinuous,(x+2)(x-2)/(x-2) (middle discontinuity) from 1 to 38.000000,8.000000,0.000000,0.000045,nan
+,discontinuous,floor(x) (middle discontinuity) from 0 to 21.000000,1.000000,0.000000,0.000029,0.000000
+,discontinuous,piecewise (middle discontinuity) from 0 to 22.500000,2.500000,0.000000,0.000030,nan
+,badly behaved,e^x*ln(sin(x)) *note: answer only accurate to e-4 from 0 to 3.14159-20.844942,-20.844942,0.000042,0.000217,0.000025
+,badly behaved,ln(x) from 0 to 1-1.000000,-1.000000,0.000000,0.000063,0.000000
+,badly behaved,ln(x^2) from 8 to 94.278978,4.278978,0.000000,0.000023,0.000000
+,badly behaved,ln(1/x) from 0 to 11.000000,1.000000,0.000000,0.000063,0.000000
+,badly behaved,x^2*sin(1/x) (oscillatory) from 0 to 0.636620.058554,0.058554,0.000014,0.000046,0.000885
+,badly behaved,ln(abs(x-0.7)) from 0 to 1-1.610246,-1.610246,0.000618,0.000086,0.001535
+,badly behaved,sqrt(1-x^4)/x^(1-1/pi) from 0 to 12.998216,2.998216,0.000001,0.000089,0.000138
+,badly behaved,e^x/(x^(1/pi) from 0 to 12.303904,2.303904,0.000000,0.000088,0.000001
+,simple,sin(x) from 0 to 10.459698,0.459698,0.000000,0.000031,0.000000
+,simple,x^2 from 0 to 10.333333,0.333333,0.000000,0.000024,0.000000
+,simple,x^3 from 0 to 10.250000,0.250000,0.000000,0.000025,0.000000
+,simple,x^10000 from 0 to 10.000000,0.000000,0.000100,0.000026,0.000000
+,simple,3*x^4+4*x^3+76*x^2+58*x+4 from -20 to 01951146.666667,1951146.666667,0.000000,0.000029,0.000000
+,simple,x^-1 from 1 to 20.693147,0.693147,0.000000,0.000022,0.000000
+,simple,e^x from 0 to 11.718282,1.718282,0.000000,0.000025,0.000000
+,simple,x^1/2 from 0 to 10.666667,0.666667,0.000001,0.000025,0.000619
+,discontinuous,(e^x-1)/x (edge discontinuity) from 0 to 11.317902,1.317902,0.000000,0.000027,0.000000
+,discontinuous,1/sqrt(abs(x)) (edge discontinuity) from -9 to 18.000000,8.000000,0.000000,0.000034,0.000000
+,discontinuous,sin(x)*sqrt(1-x^2) (edge discontinuity) *note: answer only accurate to e-6 from 0 to 10.311737,0.311737,0.000001,0.000041,0.000881
+,discontinuous,sin(x)/x (edge discontinuity) from 0 to 31.848653,1.848653,0.000000,0.000026,0.000000
+,discontinuous,sqrt(abs(x-0.7)) (middle discontinuity) *note: answer only accurate to e-6 from 0 to 10.499986,0.499986,0.000000,0.000027,0.000650
+,discontinuous,(x+2)(x-2)/(x-2) (middle discontinuity) from 1 to 38.000000,8.000000,0.000000,0.000023,0.000000
+,discontinuous,floor(x) (middle discontinuity) from 0 to 21.000000,1.000000,0.000000,0.000023,0.000000
+,discontinuous,piecewise (middle discontinuity) from 0 to 22.500000,2.500000,0.000000,0.000022,0.000000
+,badly behaved,e^x*ln(sin(x)) *note: answer only accurate to e-4 from 0 to 3.14159-20.844942,-20.844942,0.000042,0.000214,0.000025
+,badly behaved,ln(x) from 0 to 1-1.000000,-1.000000,0.000000,0.000065,0.000000
+,badly behaved,ln(x^2) from 8 to 94.278978,4.278978,0.000000,0.000026,0.000000
+,badly behaved,ln(1/x) from 0 to 11.000000,1.000000,0.000000,0.000069,0.000000
+,badly behaved,x^2*sin(1/x) (oscillatory) from 0 to 0.636620.058554,0.058554,0.000014,0.000048,0.000885
+,badly behaved,ln(abs(x-0.7)) from 0 to 1-1.610864,-1.610864,0.000000,0.000104,0.000000
+,badly behaved,sqrt(1-x^4)/x^(1-1/pi) from 0 to 12.998216,2.998216,0.000001,0.000090,0.000138
+,badly behaved,e^x/(x^(1/pi) from 0 to 12.303904,2.303904,0.000000,0.000090,0.000001
+,simple,sin(x) from 0 to 10.459698,0.459698,0.000000,0.000096,0.000957
+,simple,x^2 from 0 to 10.333333,0.333333,0.000000,0.000065,0.030928
+,simple,x^3 from 0 to 10.250000,0.250000,0.000000,0.000058,0.175862
+,simple,x^10000 from 0 to 10.000007,0.000007,0.000093,0.000048,0.419359
+,simple,3*x^4+4*x^3+76*x^2+58*x+4 from -20 to 01951146.666667,1951146.666667,0.000000,0.000052,0.647580
+,simple,x^-1 from 1 to 20.693147,0.693147,0.000000,0.000062,0.804723
+,simple,e^x from 0 to 11.718282,1.718282,0.000000,0.000057,0.897064
+,simple,x^1/2 from 0 to 10.666667,0.666667,0.000001,0.000048,0.947135
+,discontinuous,(e^x-1)/x (edge discontinuity) from 0 to 11.317902,1.317902,0.000000,0.000046,0.973209
+,discontinuous,1/sqrt(abs(x)) (edge discontinuity) from -9 to 18.000366,8.000366,0.000366,0.000045,0.986521
+,discontinuous,sin(x)*sqrt(1-x^2) (edge discontinuity) *note: answer only accurate to e-6 from 0 to 10.311736,0.311736,0.000000,0.000049,0.993238
+,discontinuous,sin(x)/x (edge discontinuity) from 0 to 31.848653,1.848653,0.000000,0.000066,0.996613
+,discontinuous,sqrt(abs(x-0.7)) (middle discontinuity) *note: answer only accurate to e-6 from 0 to 10.499946,0.499946,0.000040,0.000061,0.998305
+,discontinuous,(x+2)(x-2)/(x-2) (middle discontinuity) from 1 to 38.000000,8.000000,0.000000,0.000051,0.999152
+,discontinuous,floor(x) (middle discontinuity) from 0 to 21.000000,1.000000,0.000000,0.000041,0.999576
+,discontinuous,piecewise (middle discontinuity) from 0 to 22.500000,2.500000,0.000000,0.000045,0.999788
+,badly behaved,e^x*ln(sin(x)) *note: answer only accurate to e-4 from 0 to 3.14159-20.844909,-20.844909,0.000009,0.000047,0.999980
+,badly behaved,ln(x) from 0 to 1-0.999998,-0.999998,0.000002,0.000054,0.999990
+,badly behaved,ln(x^2) from 8 to 94.278978,4.278978,0.000000,0.000049,0.999995
+,badly behaved,ln(1/x) from 0 to 10.999998,0.999998,0.000002,0.000058,0.999998
+,badly behaved,x^2*sin(1/x) (oscillatory) from 0 to 0.636620.058571,0.058571,0.000004,0.000076,0.999999
+,badly behaved,ln(abs(x-0.7)) from 0 to 1-1.610920,-1.610920,0.000056,0.000047,1.000000
+,badly behaved,sqrt(1-x^4)/x^(1-1/pi) from 0 to 12.997952,2.997952,0.000262,0.000056,1.000002
+,badly behaved,e^x/(x^(1/pi) from 0 to 12.303890,2.303890,0.000014,0.000052,1.000001
+,simple,sin(x) from 0 to 10.459698,0.459698,0.000000,0.000058,1.000001
+,simple,x^2 from 0 to 10.333333,0.333333,0.000000,0.000053,1.000000
+,simple,x^3 from 0 to 10.250000,0.250000,0.000000,0.000048,1.000000
+,simple,x^10000 from 0 to 10.000048,0.000048,0.000052,0.000052,1.000000
+,simple,3*x^4+4*x^3+76*x^2+58*x+4 from -20 to 01951146.666667,1951146.666667,0.000000,0.000048,1.000000
+,simple,x^-1 from 1 to 20.693147,0.693147,0.000000,0.000048,1.000000
+,simple,e^x from 0 to 11.718282,1.718282,0.000000,0.000048,1.000000
+,simple,x^1/2 from 0 to 10.666667,0.666667,0.000001,0.000038,1.000000
+,discontinuous,(e^x-1)/x (edge discontinuity) from 0 to 11.317902,1.317902,0.000000,0.000053,1.000000
+,discontinuous,1/sqrt(abs(x)) (edge discontinuity) from -9 to 18.000000,8.000000,0.000000,0.000051,1.000000
+,discontinuous,sin(x)*sqrt(1-x^2) (edge discontinuity) *note: answer only accurate to e-6 from 0 to 10.311737,0.311737,0.000001,0.000053,1.000000
+,discontinuous,sin(x)/x (edge discontinuity) from 0 to 31.848653,1.848653,0.000000,0.000062,1.000000
+,discontinuous,sqrt(abs(x-0.7)) (middle discontinuity) *note: answer only accurate to e-6 from 0 to 10.499996,0.499996,0.000010,0.000047,1.000000
+,discontinuous,(x+2)(x-2)/(x-2) (middle discontinuity) from 1 to 38.000000,8.000000,0.000000,0.000054,1.000000
+,discontinuous,floor(x) (middle discontinuity) from 0 to 21.000000,1.000000,0.000000,0.000059,1.000000
+,discontinuous,piecewise (middle discontinuity) from 0 to 22.500000,2.500000,0.000000,0.000059,1.000000
+,badly behaved,e^x*ln(sin(x)) *note: answer only accurate to e-4 from 0 to 3.14159-20.844942,-20.844942,0.000042,0.000109,1.000000
+,badly behaved,ln(x) from 0 to 1-1.000000,-1.000000,0.000000,0.000060,1.000000
+,badly behaved,ln(x^2) from 8 to 94.278978,4.278978,0.000000,0.000063,1.000000
+,badly behaved,ln(1/x) from 0 to 11.000000,1.000000,0.000000,0.000058,1.000000
+,badly behaved,x^2*sin(1/x) (oscillatory) from 0 to 0.636620.058561,0.058561,0.000006,0.000049,1.000000
+,badly behaved,ln(abs(x-0.7)) from 0 to 1-1.610836,-1.610836,0.000028,0.000041,1.000000
+,badly behaved,sqrt(1-x^4)/x^(1-1/pi) from 0 to 12.998215,2.998215,0.000000,0.000070,1.000000
+,badly behaved,e^x/(x^(1/pi) from 0 to 12.303904,2.303904,0.000000,0.000054,1.000000
+,simple,sin(x) from 0 to 10.000000,0.000000,0.459698,0.000061,1.000000
+,simple,x^2 from 0 to 10.000000,0.000000,0.333333,0.000076,1.000000
+,simple,x^3 from 0 to 10.000000,0.000000,0.250000,0.000079,1.000000
+,simple,x^10000 from 0 to 10.000000,0.000000,0.000100,0.000080,1.000000
+,simple,3*x^4+4*x^3+76*x^2+58*x+4 from -20 to 00.000000,0.000000,1951146.666667,0.000067,1.000000
+,simple,x^-1 from 1 to 20.000000,0.000000,0.693147,0.000073,1.000000
+,simple,e^x from 0 to 10.000000,0.000000,1.718282,0.000076,1.000000
+,simple,x^1/2 from 0 to 10.000000,0.000000,0.666667,0.000073,1.000000
+,discontinuous,(e^x-1)/x (edge discontinuity) from 0 to 1-nan,-nan,nan,0.000055,nan
+,discontinuous,1/sqrt(abs(x)) (edge discontinuity) from -9 to 10.000000,0.000000,8.000000,0.000052,nan
+,discontinuous,sin(x)*sqrt(1-x^2) (edge discontinuity) *note: answer only accurate to e-6 from 0 to 10.000000,0.000000,0.311736,0.000075,nan
+,discontinuous,sin(x)/x (edge discontinuity) from 0 to 3-nan,-nan,nan,0.000054,nan
+,discontinuous,sqrt(abs(x-0.7)) (middle discontinuity) *note: answer only accurate to e-6 from 0 to 10.000000,0.000000,0.499986,0.000071,nan
+,discontinuous,(x+2)(x-2)/(x-2) (middle discontinuity) from 1 to 3-nan,-nan,nan,0.000076,nan
+,discontinuous,floor(x) (middle discontinuity) from 0 to 20.000000,0.000000,1.000000,0.000054,nan
+,discontinuous,piecewise (middle discontinuity) from 0 to 2nan,nan,nan,0.000052,nan
+,badly behaved,e^x*ln(sin(x)) *note: answer only accurate to e-4 from 0 to 3.14159-nan,-nan,nan,0.000078,nan
+,badly behaved,ln(x) from 0 to 1-nan,-nan,nan,0.000076,nan
+,badly behaved,ln(x^2) from 8 to 90.000000,0.000000,4.278978,0.000076,nan
+,badly behaved,ln(1/x) from 0 to 1-nan,-nan,nan,0.000053,nan
+,badly behaved,x^2*sin(1/x) (oscillatory) from 0 to 0.63662-nan,-nan,nan,0.000059,nan
+,badly behaved,ln(abs(x-0.7)) from 0 to 10.000000,0.000000,1.610864,0.000075,nan
+,badly behaved,sqrt(1-x^4)/x^(1-1/pi) from 0 to 1-nan,-nan,nan,0.000083,nan
+,badly behaved,e^x/(x^(1/pi) from 0 to 1-nan,-nan,nan,0.000080,nan

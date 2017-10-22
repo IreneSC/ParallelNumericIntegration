@@ -1,0 +1,20 @@
+/**
+
+@mainpage Numerical Integration Test
+
+@author Irene Crowell
+
+This project performs tests of various numerical integration rules. 
+
+The rules fall into two main categories: 
+Advanced Rules, which use GNU Scientific Library (GSL) functions such as Gauss-Legendre and Gauss-Kronrod, 
+and Newton Cotes Rules, which implement the simpler Newton-Cotes Rules, including parallel and adaptive forms.
+
+Each rule is tested on 24 mathematical Functions and compared to their symbolically calculated result, if available.
+If no symbolic integral exists, the rule's result is compared to a numerical result of fixed error bound sourced from
+WolframAlpha.
+
+Output from the rules is printed to csv files using functions from the Print file.
+
+
+*/
